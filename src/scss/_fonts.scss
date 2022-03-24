@@ -1,0 +1,33 @@
+// _fonts.scss
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.eot');
+    src: local('../fonts/Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+        url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+        url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('f../onts/Montserrat/Montserrat-Regular.eot');
+	src: local('../fonts/Montserrat/Montserrat Regular'), local('Montserrat-Regular'),
+		url('../fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+		url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../Montserrat-Medium.eot');
+	src: local('../Montserrat Medium'), local('Montserrat-Medium'),
+		url('../Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../Montserrat-Medium.woff') format('woff'),
+		url('../Montserrat-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}

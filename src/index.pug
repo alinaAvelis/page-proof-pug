@@ -1,0 +1,16 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	noscript 
+		| У вас не подключен JavaScript
+	include pug/components/header
+
+	include pug/pages/home
+
+	include pug/components/footer

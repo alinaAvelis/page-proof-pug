@@ -1,0 +1,312 @@
+// user.scss
+// Place your own theme CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
+
+html {
+	font-size: 14px;	
+}
+
+noscript {
+    margin-top: 100px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+body {
+    margin: 0 !important;
+
+	font-family: $font_family_gilroy;
+	font-weight: 300;
+    color: $main_text_color;
+    font-weight: 800;
+
+	position: relative;
+}
+
+// .main {
+//     overflow: hidden;
+// }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1.1;
+}
+
+p {
+    margin: 0;
+}
+
+.page {
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;  
+    
+     overflow: hidden;
+}
+
+.img {
+    display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.footer,
+.section {
+	margin-top: 50px;
+
+
+	@media(min-width: $tablet) {
+        margin-top: 136px;
+    }
+
+}
+
+.list_list_style_type_none {
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+
+.container {
+	margin: 0 12.5vw;
+
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 1.25em;
+        height: 1px;
+        background-color: $main_text_color;
+
+        position: absolute;
+        top: 50%;
+        left: -40px;
+
+        @media(min-width: $tablet) {
+            left: -80px;
+        }
+    }
+
+    @media(min-width: $tablet) {
+        font-size: 2.2rem;
+    }
+}
+
+
+.button {
+    display: block;
+	padding: 10px 48px;
+    width: fit-content;
+
+	cursor: pointer;
+	font: inherit;
+
+    background: none;
+	border: $gray-border;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 10%;
+        height: 1px;
+        background-color: $main_text_color;
+
+        position: absolute;
+        top: 50%;
+        left: -5%;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        // border: 1px solid $main_text_color;
+
+        position: absolute;
+        top: 0;
+        left: 5%;
+
+        transition: 900ms;
+    }
+
+    &--center {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &:hover {
+    
+        &::after {
+            content: "";
+            display: block;
+            animation-name: showBorder;
+            animation-duration: 900ms;
+            animation-timing-function: ease
+        }
+
+        transition-delay:   1000ms;
+
+        border-color: $main_text_color;
+	}
+	
+	&:active {
+		opacity: 0.7;
+	}
+}
+
+@keyframes showBorder {
+    0% { 
+        border-left: 1px solid $main_text_color;
+    }
+    20% {
+        border-left: 1px solid $main_text_color;
+        border-top: 1px solid $main_text_color;
+    }
+    40% { 
+        border-top: 1px solid $main_text_color;
+        border-right: 1px solid $main_text_color;
+    }
+    60% {
+        border-right: 1px solid $main_text_color;
+        border-bottom: 1px solid $main_text_color;
+    }
+    80% {
+        border-bottom: 1px solid $main_text_color;
+        border-left: 1px solid $main_text_color;
+    }
+
+    100% {
+        border-left: 1px solid $main_text_color;
+    }
+}
+
+
+.link {
+	font: inherit;
+	text-decoration: none;
+	cursor: pointer;
+    color: $main_text_color;
+}
+
+.arr_link {
+    display: none;
+    margin: 30px auto 0;
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white;
+    border-radius: 50%;
+
+    &:hover {
+        opacity: 0.8;
+        border-color: $light_brown;;
+        & svg {
+            fill: $light_brown;
+        }
+    }
+
+    &:active {
+        opacity: 0.4;
+    }
+
+}
+
+.arr_icon__container {
+    width: 15px;
+    height: 7px;
+    margin: 30% auto 0;
+}
+
+.arrow_link_down {
+    display: block !important;
+    transform: rotate(90deg);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	// overflow: hidden;
+}
+
+.title {
+    position: sticky;
+    display: block;
+
+    font-size: 2.5rem;
+    text-align: center;
+
+    @media(min-width: 500px) {
+        font-size: 4.5rem;
+        z-index: 1;
+    }
+}
+
+@import "blocks/header";
+@import "blocks/first_screen";
+@import "blocks/work_examples";
+@import "blocks/footer";
+
+
+.show {
+    display: block !important;
+}
+
+svg {
+    fill: $main_text_color;
+
+    &.white {
+        fill: $white;
+    }
+
+    &:hover {
+		fill: $light_brown;
+	}
+	
+	&:active {
+		opacity: 0.7;
+	}
+}
+
+
+.text {
+    font-family: $font_family_montserrat;
+    font-weight: 400;
+}
+
+.flex {
+	display: flex !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+

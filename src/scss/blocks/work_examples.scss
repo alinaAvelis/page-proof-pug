@@ -1,0 +1,147 @@
+// _work_examples
+
+.work_example__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25vw;
+    grid-gap: 10px;
+
+    margin-top: 30px;
+
+    @media(min-width: $tablet) {
+        margin-top: 50px;
+    }
+}
+
+.work_example {
+    &--1 {
+        grid-column-start: 1; 
+        grid-column-end: 3; 
+    }
+
+    &--2 {
+        grid-column-start: 3; 
+        grid-column-end: 4; 
+        grid-row-start: 1; 
+        grid-row-end: 3;
+    }
+
+    &--3 {
+        // grid-column-start: 3; 
+        // grid-column-end: 4; 
+        // grid-row-start: 1; 
+        // grid-row-end: 3;
+    }
+
+    &--4 {
+        // grid-column-start: 1; 
+        // grid-column-end: 2; 
+        // grid-row-start: 3; 
+        // grid-row-end: 5;
+    }
+
+    &--5 {
+        grid-column-start: 1; 
+        grid-column-end: 2; 
+        grid-row-start: 3; 
+        grid-row-end: 5;
+    }
+
+    &--6 {
+        // grid-column-start: 1; 
+        // grid-column-end: 2; 
+        // grid-row-start: 3; 
+        // grid-row-end: 5;
+    }
+
+    &--7 {
+        // grid-column-start: 1; 
+        // grid-column-end: 2; 
+        // grid-row-start: 1; 
+        // grid-row-end: 2;
+    }
+
+    &--8 {
+        grid-column-start: 2; 
+        grid-column-end: 4; 
+        // grid-row-start: 1; 
+        // grid-row-end: 2;
+    }
+}
+
+.gradient_hover {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+
+    & span:not(:nth-child(2)) {
+        display: block;
+    }
+    
+    transition: 300ms ease;
+
+    @media(min-width: $tablet) {
+        padding: 30px;
+    }
+
+}
+
+.work__text_container {
+    display: none;
+    
+    & span:first-child{
+        margin-right: 20px;
+    }    
+
+    transition: 300ms ease;
+}
+
+
+.work__text__title {
+    font-size: 0.8rem;
+}
+
+.work_text {
+    font-size: 1rem;
+}
+
+.work_example__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    font-size: 0.7rem;
+    color: $white;
+    
+    position: relative;
+
+    @media(min-width: 500px) {
+        font-size: 1rem;
+    }
+
+    @media(min-width: $tablet) {
+        font-size: 1.4rem;
+    }
+
+    &:hover {
+		font-size: 1.5rem;
+
+        & .work__text_container {
+            display: flex !important;  
+        }
+
+        & .gradient_hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.3);
+        }
+	}
+	
+	&:active {
+		opacity: 0.7;
+	}
+}
