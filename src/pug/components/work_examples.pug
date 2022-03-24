@@ -1,0 +1,33 @@
+section.section
+    .container
+        h2(class="subtitle title_text")
+            | Примеры&#8194;
+            span.title_text--white
+                | выполненных&#8194;
+            | работ
+        ul(class="work_example__list list_list_style_type_none")
+            li.work_example--1
+                +work('Новостройка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/1.webp", "images/portfolio/1.jpg", "Интерьер ванной")
+            li.work_example--2
+                 +work('Новостройка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/2.webp", "images/portfolio/2.jpg", "Интерьер кухни")
+            li.work_example--3
+                 +work('Вторичка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/3.webp", "images/portfolio/3.jpg", "Ваза и статуэтка - декоративные элементы.")
+            li.work_example--4
+                 +work('Вторичка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/4.webp", "images/portfolio/4.jpg", "Интерьер крыльца")
+            li.work_example--5
+                 +work('Новостройка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/5.webp", "images/portfolio/5.jpg", "Интерьер гостинной")
+            li.work_example--6
+                 +work('Вторичка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/6.webp", "images/portfolio/6.jpg", "Интерьер кухни")
+            li.work_example--7
+                 +work('Вторичка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/7.webp", "images/portfolio/7.jpg", "Интерьер гостинной")
+            li.work_example--8
+                 +work('Новостройка', 'Сроки', '4-5 дней', 'Стоимость', 'Нет данных')(href="#")
+                    +picture("images/portfolio/8.webp", "images/portfolio/8.jpg", "Декоративное украшение с сосновой шишкой")
+        +button("Все проекты", "#")(class="first_screen__btn   button--center")

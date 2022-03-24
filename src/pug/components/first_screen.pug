@@ -1,0 +1,51 @@
+section(class="first_screen first_screen--1")
+    h1(class="title title_text--white")
+        span(class="title_text title_text--1")
+            | Ремонт 
+            span.title_text--white и 
+            | дизайн   
+        span(class="title_text title_text--2")
+            | Услуги по ремонту
+        span(class="title_text title_text--3")
+            | Виды работ по ремонту 
+        span(class="title_text title_text--4")
+            | Дизайн интерьера
+        span(class="title_text title_text--5")
+            | Ремонт помещений  
+        br
+        | в Москве и Московской области
+    +button("Оставить заявку")(class="first_screen__btn   button--center" type="button")
+
+    -
+        const services = [
+            {
+                title: "Услуги по ремонту",
+                text: "С другой стороны реализация намеченных плановых заданий требуют от нас анализа.",
+                id: 'red',
+                class: "service__item   service__item--red"
+            },
+            {
+                title: "Виды работ",
+                text: "С другой стороны реализация намеченных плановых заданий требуют от нас анализа.",
+                id: 'green',
+                class: "service__item   service__item--green"
+            },
+            {
+                title: "Дизайн интерьера",
+                text: "С другой стороны реализация намеченных плановых заданий требуют от нас анализа.",
+                id: 'blue',
+                class: "service__item   service__item--blue"
+            },
+            {
+                title: "Ремонт помещений",
+                text: "С другой стороны реализация намеченных плановых заданий требуют от нас анализа.",
+                id: 'purple',
+                class: "service__item   service__item--purple"
+            }
+        ]
+
+    ul(class="services_list  list_list_style_type_none")
+        each item in services
+            +services_item(`${item.title}`, `${item.text}`)(class=item.class id=item.id)
+
+    +arrow_link("#")(class="arrow_link_down  first_screen__down")

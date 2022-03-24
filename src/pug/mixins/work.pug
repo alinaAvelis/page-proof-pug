@@ -1,0 +1,13 @@
+mixin work(work_title, work_text_title1, work_text1, work_text_title2, work_text2)
+    a(class="work_example__link  link")&attributes(attributes)
+            p(class="gradient_hover  flex")
+                span.work_title=work_title
+                span(class="work__text_container")
+                    span
+                        span(class="work__text__title  text")=work_text_title1
+                        span.work_text=work_text1
+                    span
+                        span(class="work__text__title  text")=work_text_title2
+                        span.work_text=work_text2
+            block
+        

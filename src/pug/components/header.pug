@@ -1,0 +1,37 @@
+header.header
+	nav.header_nav 
+		+header_link_with_icon("mapMarker")(class="link header_link_with_icon  header_link_with_icon--map" href="#")
+
+		ul(class="header_menu  flex list_list_style_type_none")
+			li
+				ul(class="flex list_list_style_type_none")
+					+header_menu_item("Главная")
+					+header_menu_item("О компании")
+					+header_menu_item("Услуги")
+			li 
+				a(class="link logo_link" href="#")
+					.logo_container
+						+svg("logo")(class="img")
+			li
+				ul(class="flex list_list_style_type_none")
+					+header_menu_item("Цены")
+					+header_menu_item("Портфолио")
+					+header_menu_item("Контакты")
+		div(class="header_address header_menu")
+			p
+				span
+					| Адрес:&#8194;
+				+address
+			p
+				span
+					| Режим работы офиса:&#8194;
+				+schedule
+
+		div(class="header_call  header_menu")
+			+tel(class="header__tel  link")
+			+button("Заказать звонок")(class="header__button" type="button")
+					
+
+		+header_link_with_icon("phone")(class="link header_link_with_icon  header_link_with_icon--tel" href="#")
+
+

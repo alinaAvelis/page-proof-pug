@@ -1,0 +1,4 @@
+mixin picture(webp, jpg, alt)
+    picture&attributes(attributes)
+        source(srcset=webp)
+        img(class="img" src=jpg alt=alt)

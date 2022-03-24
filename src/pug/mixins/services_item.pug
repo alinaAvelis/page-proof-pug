@@ -1,0 +1,9 @@
+mixin services_item(title, text)
+    li&attributes(attributes)
+        div
+            p
+                | #{title}
+            p.text
+                | #{text}
+            +arrow_link('#')
+    

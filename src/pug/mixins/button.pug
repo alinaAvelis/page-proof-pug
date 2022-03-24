@@ -1,0 +1,7 @@
+mixin button(text, href)
+    if (href) 
+        a(class="button  link" href=href)&attributes(attributes)
+            | !{text}
+    else
+        button(class="button")&attributes(attributes)
+            | !{text}

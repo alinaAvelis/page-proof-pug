@@ -1,0 +1,17 @@
+mixin contact_form 
+    form(class="contact_form" action="post") 
+        label.contact_form__label 
+            | Ваше имя
+            input(type="text" name="name" class="input" id="name" placeholder="Иван Иванов" requared)
+        label.contact_form__label 
+            | Телефон / E-mail
+            input(type="text" name="contact" class="input" id="contact" placeholder="example@example.com" requared)
+        label.contact_form__label 
+            | Ваше сообщение
+            span.comment__inputs
+                input(type="text" name="name" class="input" id="name" placeholder="Иван Иванов")
+                span.file_input_container
+                    input(type="file" name="file" class="file_input" id="file")
+                    span.file_input_icon_box
+                        +svg("addFile")(class="add_file_icon  img")
+        +button("Оставить заявку ")(class="first_screen__btn" type="submit")
